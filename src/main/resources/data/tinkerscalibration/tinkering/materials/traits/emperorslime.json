@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+        "name": "tinkerscalibration:overslime_empire",
+        "level": 1
+      },
+    {
+      "name": "tinkerscalibration:overslime_army",
+      "level": 1
+    },
+    {
+      "name": "tconstruct:overslime",
+      "level": 1
+    }
+    ]
+}

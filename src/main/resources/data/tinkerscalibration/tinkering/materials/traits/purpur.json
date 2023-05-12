@@ -1,0 +1,24 @@
+{
+  "perStat": {
+    "tconstruct:ranged": [
+      {
+        "name": "tinkerscalibration:levitate",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:enderference",
+        "level": 1
+      }
+    ],
+    "tconstruct:melee_harvest": [
+      {
+        "name": "tinkerscalibration:levitate",
+        "level": 1
+      },
+      {
+        "name": "tconstruct:enderference",
+        "level": 1
+      }
+    ]
+  }
+}
