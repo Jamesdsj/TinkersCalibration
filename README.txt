@@ -1,46 +1,17 @@
+Tinkers' Calibration
+This is a mod that "calibrates" something in the Minecraft mod Tinkers' Construct 3. "Calibrates" means it adds something that should be in Tinkers' Construct 3 but didn't show up instead and modifies something that should't be like this now.
+Licenses
+Everthing is licensed under the MIT License.
+Feel free to use the mod in your modpack. But I'm not responsible for any negative effects caused by bugs. If Tinkers' Calibration has conficts between other mods(overlapped materials, items, modifiers, tools, fluids, etc.), or you want to keep youre modpack balanced, you can modify a bit.(the mod is open-sourced, isn't it?)
+Bugs & Enhancements
+Discribe your problem clear and accurate in Github. Welcome to share your idea about new features! 
+Currently Tinkers' Calibration is being developed and only for creative tests. There aren't recipes, sounds, fluids or language files.
 
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
-
-Note also that the patches are built against "un-renamed" MCP source code (aka
-SRG Names) - this means that you will not be able to read them directly against
-normal code.
-
-Setup Process:
-==============================
-
-Step 1: Open your command-line and browse to the folder where you extracted the zip file.
-
-Step 2: You're left with a choice.
-If you prefer to use Eclipse:
-1. Run the following command: `gradlew genEclipseRuns` (`./gradlew genEclipseRuns` if you are on Mac/Linux)
-2. Open Eclipse, Import > Existing Gradle Project > Select Folder 
-   or run `gradlew eclipse` to generate the project.
-
-If you prefer to use IntelliJ:
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Run the following command: `gradlew genIntellijRuns` (`./gradlew genIntellijRuns` if you are on Mac/Linux)
-4. Refresh the Gradle Project in IDEA if required.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can 
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-=============================
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license, if you do not agree with it you can change your mapping names to other crowdsourced names in your 
-build.gradle. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
-
-Additional Resources: 
-=========================
-Community Documentation: http://mcforge.readthedocs.io/en/latest/gettingstarted/  
-LexManos' Install Video: https://www.youtube.com/watch?v=8VEdtQLuLO0  
-Forge Forum: https://forums.minecraftforge.net/  
-Forge Discord: https://discord.gg/UvedJ9m  
+For Chinese Players:
+匠魂校准
+这是一个“校准”我的世界的模组匠魂3中的东西的mod。“校准”意味着它添加了一些应该出现在匠魂3中但却没有出现的东西，并修改了一些现在不应该是这样的的东西。
+许可
+所有内容都是根据MIT许可协议进行许可的。可以在你的整合包中随意使用这个模组。但我不为任何漏洞造成的负面影响负责。如果匠魂校准与其他模组有冲突(重叠的材料，物品，强化，工具，流体等)，或者你想保持你的整合包平衡，你可以稍微修改一下。(模组是开源的，不是吗?)
+漏洞&改进
+在Github中清晰准确地描述你的问题。欢迎分享您你对新功能的想法!当然，大家都是中国人，我更推荐在我的mcmod个人主页留言。（https://center.mcmod.cn/379558）
+目前，匠魂校准还在开发中，仅用于创造模式测试。没有配方、声音、流体或语言文件。
