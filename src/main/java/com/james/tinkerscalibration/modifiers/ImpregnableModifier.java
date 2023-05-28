@@ -30,16 +30,16 @@ import slimeknights.tconstruct.tools.TinkerModifiers;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ImpregnableModifier extends Modifier implements ProjectileLaunchModifierHook{
+public class ImpregnableModifier extends Modifier implements ProjectileLaunchModifierHook, ConditionalStatModifierHook{
     private static final Component UNBREAKING = TConstruct.makeTranslation("modifier", "impregnable.unbreaking");
+    @Override
+    protected void registerHooks(ModifierHookMap.Builder hookBuilder) {
+        hookBuilder.addHook(this, TinkerHooks.CONDITIONAL_STAT, TinkerHooks.PROJECTILE_LAUNCH);
+    }
     private static float getBonus(LivingEntity living, RegistryObject<? extends TinkerEffect> effect, int level, float scale) {
-        // 25% boost per level at max
         int effectLevel = effect.get().getLevel(living) + 1;
         return level * effectLevel / scale;
     }
-
-
-
     @Override
     public void afterBlockBreak(IToolStackView tool, int level, ToolHarvestContext context) {
         if (context.canHarvest() && context.isEffective() && !context.isAOE()) {
@@ -49,16 +49,37 @@ public class ImpregnableModifier extends Modifier implements ProjectileLaunchMod
             Utils.impregnableEffect.get().apply(living, 160, effectLevel, true);
         }
     }
+    @Override
+    public int onDamageTool(IToolStackView tool, int level, int amount, @Nullable LivingEntity holder) {
+        boolean harvest = tool.hasTag(TinkerTags.Items.HARVEST);
+        float bonus;
+        if (harvest) {
+            bonus = getBonus(holder, Utils.impregnableEffect, level, 6);
+        } else {
+            bonus = getBonus(holder, Utils.impregnableEffect, level, 4);
+        }
+        bonus *= 1;
+        int off = 0;
+        for (int i = 0; i < amount; i++) {
+            if (RANDOM.nextFloat() >= 1 / bonus) {
+                off++;
+            }
+        }
+        return amount - off;
+    }
 
     @Override
     public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @Nullable AbstractArrow arrow, NamespacedNBT persistentData, boolean primary) {
         if (primary && (arrow == null || arrow.isCritArrow())) {
             // 16 arrows gets you to max
-            int effectLevel = Math.min(15, TinkerModifiers.momentumRangedEffect.get().getLevel(shooter) + 1);
-            TinkerModifiers.momentumRangedEffect.get().apply(shooter, 5 * 20, effectLevel, true);
+            int effectLevel = Math.min(15, Utils.impregnableEffect.get().getLevel(shooter) + 1);
+            Utils.impregnableEffect.get().apply(shooter, 5 * 20, effectLevel, true);
         }
     }
-
+    @Override
+    public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity living, FloatToolStat stat, float baseValue, float multiplier) {
+        return baseValue;
+    }
     @Override
     public void addInformation(IToolStackView tool, int level, @Nullable Player player, List<Component> tooltip, TooltipKey key, TooltipFlag flag) {
         boolean harvest = tool.hasTag(TinkerTags.Items.HARVEST);
@@ -66,9 +87,9 @@ public class ImpregnableModifier extends Modifier implements ProjectileLaunchMod
             float bonus;
             if (player != null && key == TooltipKey.SHIFT) {
                 if (harvest) {
-                    bonus = getBonus(player, Utils.impregnableEffect, level, 128f);
+                    bonus = getBonus(player, Utils.impregnableEffect, level, 6);
                 } else {
-                    bonus = getBonus(player, Utils.impregnableEffect, level, 64f);
+                    bonus = getBonus(player, Utils.impregnableEffect, level, 4);
                 }
             } else {
                 bonus = level * 0.25f;

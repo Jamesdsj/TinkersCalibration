@@ -14,6 +14,6 @@ public class FiberGlass extends Item {
 }
 public class ItemRegistry {
         public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Utils.MOD_ID);
-        public static final RegistryObject<Item> fiberglass = ITEMS.register("fiberglass", FiberGlass::new);
+        public static final RegistryObject<Item> Fiberglass = ITEMS.register("fiberglass", FiberGlass::new);
     }}
 

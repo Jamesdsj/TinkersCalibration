@@ -2,7 +2,7 @@
   "fallbacks": [
     "metal"
   ],
-  "color": "ffffff",
+  "color": "fffaf0",
   "luminosity": 0,
   "generator": {
     "transformer": {
@@ -16,7 +16,7 @@
           },
           {
             "grey": 63,
-            "color": "FF00ffff"
+            "color": "FFfffaf0"
           },
           {
             "grey": 102,
@@ -24,7 +24,7 @@
           },
           {
             "grey": 140,
-            "color": "FFE8E5D5"
+            "color": "FFfffaf0"
           },
           {
             "grey": 178,
@@ -32,7 +32,7 @@
           },
           {
             "grey": 216,
-            "color": "FF00ffff"
+            "color": "FFfffaf0"
           },
           {
             "grey": 255,

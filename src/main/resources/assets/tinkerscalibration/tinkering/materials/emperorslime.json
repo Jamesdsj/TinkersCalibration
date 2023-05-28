@@ -2,7 +2,7 @@
   "fallbacks": [
     "metal"
   ],
-  "color": "ff4500",
+  "color": "9acd32",
   "luminosity": 0,
   "generator": {
     "transformer": {
@@ -12,7 +12,7 @@
         "palette": [
           {
             "grey": 0,
-            "color": "FFff4500"
+            "color": "FF9acd32"
           },
           {
             "grey": 63,
@@ -20,15 +20,15 @@
           },
           {
             "grey": 102,
-            "color": "FFff4500"
+            "color": "FF9acd32"
           },
           {
             "grey": 140,
-            "color": "FFff4500"
+            "color": "FF9acd32"
           },
           {
             "grey": 178,
-            "color": "FFff4500"
+            "color": "FF9acd32"
           },
           {
             "grey": 216,
@@ -36,7 +36,7 @@
           },
           {
             "grey": 255,
-            "color": "FFff4500"
+            "color": "FF9acd32"
           }
         ]
       }

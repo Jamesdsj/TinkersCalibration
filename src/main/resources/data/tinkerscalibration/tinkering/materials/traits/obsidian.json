@@ -1,6 +1,8 @@
 {
-  "flags": [
-    "tconstruct:indestructible"
+  "default": [
+    {
+      "name": "tinkerscalibration:igneous",
+      "level": 1
+    }
   ]
-
 }

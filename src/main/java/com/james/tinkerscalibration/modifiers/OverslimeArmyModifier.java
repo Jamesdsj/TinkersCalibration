@@ -43,7 +43,6 @@ public class OverslimeArmyModifier extends Modifier implements ProjectileHitModi
     @Override
     public float getEntityDamage(@Nonnull IToolStackView tool, int level, @Nonnull ToolAttackContext context, float baseDamage, float damage) {
         OverslimeModifier overslime = TinkerModifiers.overslime.get();
-        int capacity = overslime.getCapacity(tool);
         int current = overslime.getOverslime(tool);
         if (current > 0) {
             return (float) (damage + current * 0.001 * level);

@@ -6,6 +6,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Fluid;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -16,12 +17,13 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
 import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
 import slimeknights.tconstruct.tools.modifiers.effect.NoMilkEffect;
+import slimeknights.tconstruct.tools.modifiers.traits.melee.LaceratingModifier;
 
 import java.util.function.IntFunction;
 import java.util.function.Supplier;
 
 
-public class Utils extends TinkerModule {
+public class Utils extends TinkerModule{
     public static final String MOD_ID = "tinkerscalibration";
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, TinkersCalibration.MODID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TinkersCalibration.MODID);
@@ -39,12 +41,21 @@ public class Utils extends TinkerModule {
     public static final MaterialId mangobberslime = createMaterial("mangobberslime");
     public static final MaterialId emperorslime = createMaterial("emperorslime");
     public static final MaterialId hymon = createMaterial("hymon");
+    public static final MaterialId fazelle = createMaterial("fazelle");
+    public static final MaterialId blazewood = createMaterial("blazewood");
+    public static final MaterialId carminite = createMaterial("carminite");
+    public static final MaterialId soulgold = createMaterial("soulgold");
+    public static final MaterialId andesitalloy = createMaterial("andesitalloy");
+    public static final MaterialId cupronickel = createMaterial("cupronickel");
+    public static final MaterialId redmatter = createMaterial("redmatter");
+    public static final MaterialId titanium = createMaterial("titanium");
+    public static final MaterialId breashell = createMaterial("breashell");
     private static final IntFunction<Supplier<TinkerEffect>> MARKER_EFFECT = color -> () -> new NoMilkEffect(MobEffectCategory.BENEFICIAL, color, true);
     public static RegistryObject<TinkerEffect> impregnableEffect = MOB_EFFECTS.register("impregnable", MARKER_EFFECT.apply(0x30236c));
     public static StaticModifier<Modifier> sharplikeglass = MODIFIERS.register("sharp_like_glass", SharpLikeGlassModifier::new);
     public static StaticModifier<Modifier> lightlikeglass = MODIFIERS.register("light_like_glass", LightLikeGlassModifier::new);
     public static StaticModifier<Modifier> fragilelikeglass = MODIFIERS.register("fragile_like_glass", FragileLikeGlassModifier::new);
-    public static StaticModifier<Modifier> purgator = MODIFIERS.register("purgator", PurgatorModifier::new);
+    public static StaticModifier<Modifier> purgatory = MODIFIERS.register("purgatory", PurgatoryModifier::new);
     public static StaticModifier<Modifier> levitate = MODIFIERS.register("levitate", LevitateModifier::new);
     public static StaticModifier<Modifier> bamboogrowing = MODIFIERS.register("bamboo_growing", BambooGrowingModifier::new);
     public static StaticModifier<Modifier> refined = MODIFIERS.register("refined", RefinedModifier::new);
@@ -57,6 +68,20 @@ public class Utils extends TinkerModule {
     public static StaticModifier<Modifier> overslimeempire = MODIFIERS.register("overslime_empire", OverslimeEmpireModifier::new);
     public static StaticModifier<Modifier> overslimeexpedition = MODIFIERS.register("overslime_army", OverslimeArmyModifier::new);
     public static StaticModifier<Modifier> hydrophilous = MODIFIERS.register("hydrophilous", HydrophilousModifier::new);
+    public static StaticModifier<Modifier> dash = MODIFIERS.register("dash", DashModifier::new);
+    public static StaticModifier<Modifier> darkness = MODIFIERS.register("darkness", DarknessModifier::new);
+    public static StaticModifier<Modifier> stonecold = MODIFIERS.register("stone_cold", StoneColdModifier::new);
+    public static StaticModifier<Modifier> vengeance = MODIFIERS.register("vengeance", VengeanceModifier::new);
+    public static StaticModifier<Modifier> igneous = MODIFIERS.register("igneous", IgneousModifier::new);
+    public static StaticModifier<Modifier> beekeeper = MODIFIERS.register("bee_keeper", BeeKeeperModifier::new);
+    public static StaticModifier<Modifier> familiar = MODIFIERS.register("familiar", FamiliarModifier::new);
+    public static StaticModifier<Modifier> subdue = MODIFIERS.register("subdue", SubdueModifier::new);
+    public static StaticModifier<Modifier> dominate = MODIFIERS.register("dominate", DominateModifier::new);
+    public static StaticModifier<Modifier> airblade = MODIFIERS.register("airblade", AirBladeModifier::new);
+    public static StaticModifier<Modifier> laceratingtitanium = MODIFIERS.register("laceratingtitanium", LaceratingModifier::new);
+    public static StaticModifier<Modifier> criticalattack = MODIFIERS.register("criticalattack", CriticalAttackModifier::new);
+    private static IEventBus HymonArrow;
+
     public static MaterialId createMaterial(String name) {
         return new MaterialId(new ResourceLocation(TinkersCalibration.MODID, name));
     }

@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+        "name": "tinkerscalibration:vengeance",
+        "level": 1
+      },
+      {
+        "name": "tinkerscalibration:familiar",
+        "level": 1
+      }
+    ]
+}

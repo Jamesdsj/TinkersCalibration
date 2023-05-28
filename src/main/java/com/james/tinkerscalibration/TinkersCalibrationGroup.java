@@ -10,6 +10,6 @@ public class TinkersCalibrationGroup extends CreativeModeTab {
 
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(FiberGlass.ItemRegistry.fiberglass.get());
+        return new ItemStack(FiberGlass.ItemRegistry.Fiberglass.get());
     }
 }

@@ -60,5 +60,5 @@ side="BOTH"
 modId="tconstruct"
 mandatory=true
 versionRange="[1.18.2-3.6.3.111,)"
-ordering="NONE"
+ordering="AFTER"
 side="BOTH"

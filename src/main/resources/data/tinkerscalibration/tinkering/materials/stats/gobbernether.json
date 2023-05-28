@@ -10,7 +10,7 @@
     "tconstruct:head": {
       "durability": 1700,
       "miningSpeed": 7.5,
-      "harvestTier": "minecraft:netherite",
+      "harvestTier": "tinkerscalibration:nethergobber",
       "attack": 5.5
     },
     "tconstruct:limb": {
