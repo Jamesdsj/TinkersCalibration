@@ -114,6 +114,10 @@ repositories {
         name 'DVS1 Maven FS'
         url 'https://dvs1.progwml6.com/files/maven'
     }
+    maven {
+        name 'Thermal Maven'
+        url 'https://maven.covers1624.net/'
+    }
     maven { // TOP
         name 'tterrag maven'
         url "https://maven.tterrag.com/"
@@ -125,6 +129,9 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        url = "https://modmaven.dev/" // Twilight Forest
+    }
 }
 
 dependencies {
@@ -132,8 +139,12 @@ dependencies {
     implementation fg.deobf("slimeknights.tconstruct:TConstruct:1.18.2-${tcon_version}")
     implementation fg.deobf("slimeknights.mantle:Mantle:1.18.2-${mantle_version}")
     implementation fg.deobf("mezz.jei:jei-${minecraft_version}:${jei_version}")
+    implementation fg.deobf("com.teamcofh:thermal_foundation:${minecraft_version}-${thermal_foundation_version}")
+    implementation fg.deobf("com.teamcofh:thermal_expansion:${minecraft_version}-${thermal_expansion_version}")
+    implementation fg.deobf("com.teamcofh:cofh_core:${minecraft_version}-${cofh_core_version}")
+    implementation fg.deobf("teamtwilight:twilightforest:4.1.1494:universal")
+    implementation fg.deobf("curse.maven:projecte-226410:${project.projecte_file}")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-
 }
 
 jar {
@@ -143,7 +154,6 @@ jar {
                 "Specification-Vendor": "dddddsj",
                 "Specification-Version": "1", // We are version 1 of ourselves
                 "Implementation-Title": project.name,
-                "Implementation-Version": "${version}",
                 "Implementation-Vendor" :"dddddsj",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])

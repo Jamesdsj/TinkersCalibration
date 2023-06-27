@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient":{ "item":"gobber2:gobber2_ingot"},
+  "result": {
+    "fluid": "tinkerscalibration:moltengobber",
+    "amount": 90
+  },
+  "temperature": 800,
+  "time": 60
+}

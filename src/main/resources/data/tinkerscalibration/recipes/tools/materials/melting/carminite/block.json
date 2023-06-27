@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "twilightforest:carminite_block"
+  },
+  "result": {
+    "fluid": "tinkerscalibration:moltencarminite",
+    "amount": 900
+  },
+  "temperature": 900,
+  "time": 80
+}

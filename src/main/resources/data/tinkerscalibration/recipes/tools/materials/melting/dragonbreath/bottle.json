@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "minecraft:dragon_breath"
+  },
+  "result": {
+    "fluid": "tinkerscalibration:dragonbreath",
+    "amount": 1000
+  },
+  "temperature": 1300,
+  "time": 100,
+  "byproducts": [
+    {
+      "fluid": "tconstruct:molten_glass",
+      "amount": 1000
+    }
+  ]
+}

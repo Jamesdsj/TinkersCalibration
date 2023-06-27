@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tinkerscalibration:titanium_ingot"
+  },
+  "result": {
+    "fluid": "tinkerscalibration:moltentitanium",
+    "amount": 90
+  },
+  "temperature": 1350,
+  "time": 80
+}

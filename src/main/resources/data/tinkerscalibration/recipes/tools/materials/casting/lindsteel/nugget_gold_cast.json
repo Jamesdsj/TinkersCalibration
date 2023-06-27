@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/nugget"
+  },
+  "fluid": {
+    "name": "tinkerscalibration:moltenlindsteel",
+    "amount": 10
+  },
+  "result": "tinkerscalibration:lindsteel_nugget",
+  "cooling_time": 40
+}

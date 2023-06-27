@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:melting_fuel",
+  "conditions": [
+    {
+      "modid": "twilightforest",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "fluid": {
+    "name": "twilightforest:fiery_essence",
+    "amount": 50
+  },
+  "duration": 240,
+  "temperature": 1200
+}

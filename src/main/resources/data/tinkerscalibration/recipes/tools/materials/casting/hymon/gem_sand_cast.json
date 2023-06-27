@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/gem"
+  },
+  "fluid": {
+    "name": "tinkerscalibration:moltenhymon",
+    "amount": 90
+  },
+  "result": "tinkerscalibration:hymon",
+  "cooling_time": 45
+}

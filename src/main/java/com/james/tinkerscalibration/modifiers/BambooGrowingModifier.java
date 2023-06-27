@@ -24,7 +24,7 @@ public class BambooGrowingModifier extends IncrementalModifier {
     public void onInventoryTick(@Nonnull IToolStackView tool, int level, @Nonnull Level world, @Nonnull LivingEntity holder, int itemSlot, boolean isSelected, boolean isCorrectSlot, ItemStack stack){;
         if (!world.isClientSide && holder.tickCount % 8 == 0 && holder.getUseItem() != stack && isSelected) {
             int bonus = getBonus(holder);
-            if (bonus > 0 && RANDOM.nextFloat() < (level * 0.25)) {
+            if (bonus > 0 && RANDOM.nextFloat() < (level * 0.25) && !tool.isBroken()) {
                 ToolDamageUtil.repair(tool, bonus);
             }
         }

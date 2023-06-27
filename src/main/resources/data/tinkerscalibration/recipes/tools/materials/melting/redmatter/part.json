@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input":"tinkerscalibration:redmatter",
+  "result": {
+    "fluid": "tinkerscalibration:moltenredmatter",
+    "amount": 90
+  },
+  "temperature": 550
+}

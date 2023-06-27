@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:material",
+  "conditions": [
+    {
+      "modid": "gobber2",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "gobber2:gobber2_ingot_nether"
+  },
+  "value": 1,
+  "needed": 1,
+  "material": "tinkerscalibration:gobbernether"
+}

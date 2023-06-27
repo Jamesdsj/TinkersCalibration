@@ -12,7 +12,7 @@
         "palette": [
           {
             "grey": 0,
-            "color": "FFff4500"
+            "color": "FF482333"
           },
           {
             "grey": 63,
@@ -20,23 +20,23 @@
           },
           {
             "grey": 102,
-            "color": "FF000000"
+            "color": "FF321722"
           },
           {
             "grey": 140,
-            "color": "FFff4500"
+            "color": "FF542C3C"
           },
           {
             "grey": 178,
-            "color": "FFff4500"
+            "color": "FF73354E"
           },
           {
             "grey": 216,
-            "color": "FF000000"
+            "color": "FFffaa09"
           },
           {
             "grey": 255,
-            "color": "FFff4500"
+            "color": "FFffa500"
           }
         ]
       }

@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tconstruct:ichor_staff"
+  },
+  "result": {
+    "fluid": "tinkerscalibration:moltenichor",
+    "amount": 500
+  },
+  "temperature": 800,
+  "time": 90,
+  "byproducts": [
+    {
+      "fluid": "tconstruct:molten_queens_slime",
+      "amount": 90
+    }
+  ]
+}

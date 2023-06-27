@@ -2,7 +2,7 @@
   "fallbacks": [
     "metal"
   ],
-  "color": "556b2f",
+  "color": "5A603E",
   "luminosity": 0,
   "generator": {
     "transformer": {
@@ -16,27 +16,27 @@
           },
           {
             "grey": 63,
-            "color": "FF556b2f"
+            "color": "FFADB391"
           },
           {
             "grey": 102,
-            "color": "FF000000"
+            "color": "FF202604"
           },
           {
             "grey": 140,
-            "color": "FF556b2f"
+            "color": "FF414725"
           },
           {
             "grey": 178,
-            "color": "FF556b2f"
+            "color": "FF4C5230"
           },
           {
             "grey": 216,
-            "color": "FF556b2f"
+            "color": "FF40533C"
           },
           {
             "grey": 255,
-            "color": "FF000000"
+            "color": "FF253423"
           }
         ]
       }

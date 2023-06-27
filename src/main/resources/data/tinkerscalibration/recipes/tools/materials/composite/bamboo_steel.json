@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "input": "tconstruct:bamboo",
+  "fluid": {
+    "tag": "tconstruct:molten_iron",
+    "amount": 60
+  },
+  "temperature": 700,
+  "output": "tinkerscalibration:bamboosteel"
+}

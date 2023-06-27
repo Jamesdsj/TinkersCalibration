@@ -2,10 +2,6 @@
   "perStat": {
     "tconstruct:ranged": [
       {
-        "name": "tinkerscalibration:bamboo_growing",
-        "level": 1
-      },
-      {
         "name": "twilightforest:twilit",
         "level": 1
       },
@@ -15,10 +11,6 @@
       }
     ],
     "tconstruct:melee_harvest": [
-      {
-        "name": "tinkerscalibration:hydrophilous",
-        "level": 1
-      },
       {
         "name": "twilightforest:twilit",
         "level": 1

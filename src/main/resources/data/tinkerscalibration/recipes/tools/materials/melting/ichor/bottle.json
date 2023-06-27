@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "tconstruct:ichor_bottle"
+  },
+  "result": {
+    "fluid": "tconstruct:molten_ichor",
+    "amount": 1000
+  },
+  "temperature": 800,
+  "time": 100,
+  "byproducts": [
+    {
+      "fluid": "tconstruct:molten_glass",
+      "amount": 1000
+    }
+  ]
+}

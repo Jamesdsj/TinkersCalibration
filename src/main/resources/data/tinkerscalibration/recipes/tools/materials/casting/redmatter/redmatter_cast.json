@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:casting_table",
+  "fluid": {
+    "name": "tinkerscalibration:moltenredmatter",
+    "amount": 90
+  },
+  "result": "projecte:red_matter",
+  "cooling_time": 175
+}

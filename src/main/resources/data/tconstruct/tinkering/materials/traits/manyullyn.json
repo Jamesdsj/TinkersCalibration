@@ -1,0 +1,12 @@
+{
+  "default": [
+    {
+      "name": "tconstruct:insatiable",
+      "level": 1
+    },
+    {
+      "name": "tinkerscalibration:stone_cold",
+      "level": 1
+    }
+  ]
+}

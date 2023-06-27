@@ -11,14 +11,14 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 public class UnitedModifier extends Modifier {
     @Override
     public void addToolStats(ToolRebuildContext context, int level, ModifierStatsBuilder builder) {
-        ToolStats.DRAW_SPEED.multiply(builder, 1 + 0.6 * level);
-        ToolStats.MINING_SPEED.multiply(builder, 1 + 0.6 * level);
-        ToolStats.DURABILITY.multiply(builder, 1 + 0.6 * level);
-        ToolStats.ATTACK_SPEED.multiply(builder, 1 + 0.6 * level);
-        ToolStats.ATTACK_DAMAGE.multiply(builder, 1 + 0.6 * level);
-        ToolStats.VELOCITY.multiply(builder, 1 + 0.6 * level);
-        ToolStats.ACCURACY.multiply(builder, 1 + 0.6 * level);
-        ToolStats.PROJECTILE_DAMAGE.multiply(builder, 1 + 0.6 * level);
+        ToolStats.DRAW_SPEED.multiply(builder, 1 + 0.4 * level);
+        ToolStats.MINING_SPEED.multiply(builder, 1 + 0.4 * level);
+        ToolStats.DURABILITY.multiply(builder, 1 + 0.4 * level);
+        ToolStats.ATTACK_SPEED.multiply(builder, 1 + 0.4 * level);
+        ToolStats.ATTACK_DAMAGE.multiply(builder, 1 + 0.4 * level);
+        ToolStats.VELOCITY.multiply(builder, 1 + 0.4 * level);
+        ToolStats.ACCURACY.multiply(builder, 1 + 0.4 * level);
+        ToolStats.PROJECTILE_DAMAGE.multiply(builder, 1 + 0.4 * level);
     }
     @Override
     public void addVolatileData(ToolRebuildContext context, int level, ModDataNBT volatileData) {

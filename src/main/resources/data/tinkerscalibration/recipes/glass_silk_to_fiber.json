@@ -1,0 +1,26 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:true"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "XXX"
+        ],
+        "key": {
+          "X": {
+            "item": "tinkerscalibration:glass_silk"
+          }
+        },
+        "result": {
+          "item": "tinkerscalibration:fiberglass"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient":{ "item":"tinkerscalibration:ocean_compound"},
+  "result": {
+    "fluid": "tinkerscalibration:moltenhymon",
+    "amount": 60
+  },
+  "temperature": 550,
+  "time": 80
+}

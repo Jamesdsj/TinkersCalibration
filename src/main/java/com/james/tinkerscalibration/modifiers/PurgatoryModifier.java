@@ -12,13 +12,19 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.modifiers.ModifierEntry;
+import slimeknights.tconstruct.library.modifiers.hook.ConditionalStatModifierHook;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
+import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class PurgatoryModifier extends Modifier {
+import static slimeknights.tconstruct.library.tools.stat.ToolStats.DRAW_SPEED;
+
+public class PurgatoryModifier extends Modifier implements ConditionalStatModifierHook {
     public boolean isNetherDimension(Entity entity) {
         return entity != null && isNetherDimension(entity.level);
     }
@@ -42,6 +48,16 @@ public class PurgatoryModifier extends Modifier {
         if(isNetherDimension(event.getPlayer())) {
             event.setNewSpeed(event.getNewSpeed() * 1.08f * level);
         }
+    }
+    @Override
+    public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity living, FloatToolStat stat, float baseValue, float multiplier) {
+        int level = modifier.getLevel();
+        if(isNetherDimension(living)) {
+            if (stat == DRAW_SPEED) {
+                return baseValue * 1.08f * level;
+            }
+        }
+        return baseValue;
     }
     @Override
     public void addInformation(@Nonnull IToolStackView tool, int level, @Nullable Player player, @Nonnull List<Component> tooltip, @Nonnull TooltipKey tooltipKey, @Nonnull TooltipFlag tooltipFlag) {

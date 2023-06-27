@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_basin",
+  "cast": {
+    "item": "minecraft:dirt"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tinkerscalibration:moltenichor",
+    "amount": 1000
+  },
+  "result": "tconstruct:ichor_slime_dirt",
+  "cooling_time": 106
+}

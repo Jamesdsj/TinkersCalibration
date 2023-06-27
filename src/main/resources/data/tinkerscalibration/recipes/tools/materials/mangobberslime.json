@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "name": "tconstruct:molten_queens_slime",
+      "amount": 90
+    },
+    {
+      "name": "tconstruct:molten_manyullyn",
+      "amount": 90
+    },
+    {
+      "name": "tinkerscalibration:moltenendgobber",
+      "amount": 450
+    }
+  ],
+  "result": {
+    "fluid": "tinkerscalibration:moltenmangobberslime",
+    "amount": 180
+  },
+  "temperature": 1500
+}

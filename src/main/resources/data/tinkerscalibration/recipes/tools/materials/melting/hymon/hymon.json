@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient":{ "item":"tinkerscalibration:hymon"},
+  "result": {
+    "fluid": "tinkerscalibration:moltenhymon",
+    "amount": 90
+  },
+  "temperature": 550,
+  "time": 40
+}

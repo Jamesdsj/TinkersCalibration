@@ -2,13 +2,13 @@
   "perStat": {
     "tconstruct:ranged": [
       {
-        "name": "tinkerscalibration:purgator",
+        "name": "tinkerscalibration:purgatory",
         "level": 1
       }
     ],
     "tconstruct:melee_harvest": [
       {
-        "name": "tinkerscalibration:purgator",
+        "name": "tinkerscalibration:purgatory",
         "level": 1
       }
     ]

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "fluid": {
+    "name": "tinkerscalibration:moltenmandite",
+    "amount": 90
+  },
+  "result": "tinkerscalibration:mandite_ingot",
+  "cooling_time": 160
+}

@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:casting_basin",
+  "fluid": {
+    "name": "tinkerscalibration:moltengobber",
+    "amount": 810
+  },
+  "result": "gobber2:gobber_block",
+  "cooling_time": 160
+}

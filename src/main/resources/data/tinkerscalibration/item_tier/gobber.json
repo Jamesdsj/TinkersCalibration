@@ -1,0 +1,10 @@
+{
+  "uses": 2500,
+  "speed": 2,
+  "attack_damage_bonus": 2,
+  "enchantment_value": 30,
+  "tag": "gobber2:needs_gobber_tool",
+  "repair_ingredient": { "item": "gobber2_ingot" },
+  "sort_after": ["minecraft:netherite"],
+  "sort_before": ["tinkerscalibration:nethergobber"]
+}

@@ -1,0 +1,53 @@
+{
+  "conditions": [
+    {
+      "condition": "mantle:block_tag",
+      "block": "gobber2:gobber2_ore_end"
+    },
+    {
+      "condition": "tconstruct:tag_not_empty",
+      "registry": "minecraft:item",
+      "item": "gobber2:gobber_globette_end"
+    },
+    {
+      "condition": "tconstruct:has_modifier",
+      "modifier": "tinkerscalibration:gobber_bless_nether"
+    }
+  ],
+  "modifier_conditions": [
+    {
+      "type": "mantle:inverted",
+      "condition": {
+        "type": "mantle:contains_item",
+        "ingredient": {
+          "block": "gobber2:gobber2_ore_end"
+        }
+      }
+    }
+  ],
+  "entry": {
+    "type": "tconstruct:tag_preference",
+    "item": "gobber2:gobber_globette_end"
+  },
+  "functions": [
+    {
+      "function": "minecraft:set_count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min": 1.0,
+        "max": 4.0
+      },
+      "add": false
+    },
+    {
+      "function": "tconstruct:modifier_bonus",
+      "modifier": "tinkerscalibration:gobber_bless_nether",
+      "formula": "minecraft:ore_drops",
+      "include_base": false
+    },
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ],
+  "type": "mantle:add_entry"
+}

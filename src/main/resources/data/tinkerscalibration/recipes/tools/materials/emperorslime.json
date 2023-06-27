@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "name": "tinkers_thinking:molten_ardite",
+      "amount": 90
+    },
+    {
+      "tag": "forge:molten_gold",
+      "amount": 90
+    },
+    {
+      "name": "tinkerscalibration:moltenichor",
+      "amount": 250
+    }
+  ],
+  "result": {
+    "fluid": "tinkerscalibration:moltenemperorslime",
+    "amount": 180
+  },
+  "temperature": 1150
+}

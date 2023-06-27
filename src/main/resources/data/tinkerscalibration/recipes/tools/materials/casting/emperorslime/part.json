@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "name": "tinkerscalibration:moltenemperorslime",
+    "amount": 90
+  },
+  "temperature": 1150,
+  "output": "tinkerscalibration:emperorslime"
+}

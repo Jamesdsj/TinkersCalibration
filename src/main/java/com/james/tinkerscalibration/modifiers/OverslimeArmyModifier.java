@@ -5,6 +5,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.registries.RegistryObject;
@@ -14,8 +16,11 @@ import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.hook.ConditionalStatModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.ProjectileHitModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.ProjectileLaunchModifierHook;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
+import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import slimeknights.tconstruct.library.utils.TooltipKey;
@@ -28,14 +33,17 @@ import java.util.List;
 
 import static slimeknights.mantle.item.RetexturedBlockItem.addTooltip;
 
-public class OverslimeArmyModifier extends Modifier implements ProjectileHitModifierHook, ConditionalStatModifierHook {
-
+public class OverslimeArmyModifier extends Modifier implements ProjectileLaunchModifierHook, ConditionalStatModifierHook {
+    @Override
+    public int getPriority() {
+        return 70;
+    }
     @Override
     public void onBreakSpeed(@Nonnull IToolStackView tool, int level, @Nonnull PlayerEvent.BreakSpeed event, @Nonnull Direction sideHit, boolean isEffective, float miningSpeedModifier) {
         OverslimeModifier overslime = TinkerModifiers.overslime.get();
         int current = overslime.getOverslime(tool);
         if (current > 0) {
-            event.setNewSpeed((float) (event.getOriginalSpeed() + current * level * 0.001));
+            event.setNewSpeed((float) (event.getNewSpeed() + current * 0.012));
         }
 
     }
@@ -45,7 +53,7 @@ public class OverslimeArmyModifier extends Modifier implements ProjectileHitModi
         OverslimeModifier overslime = TinkerModifiers.overslime.get();
         int current = overslime.getOverslime(tool);
         if (current > 0) {
-            return (float) (damage + current * 0.001 * level);
+            return (float) (damage + current * 0.012);
         }
         return damage;
     }
@@ -53,11 +61,9 @@ public class OverslimeArmyModifier extends Modifier implements ProjectileHitModi
     @Override
     public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity living, FloatToolStat stat, float baseValue, float multiplier) {
         OverslimeModifier overslime = TinkerModifiers.overslime.get();
-        int capacity = overslime.getCapacity(tool);
-        int current = overslime.getOverslime(tool);
-        int level = modifier.getLevel();
+        float current = overslime.getOverslime(tool);
         if (stat == ToolStats.DRAW_SPEED) {
-            return (float) (baseValue * (1 + current * level* 0.0001));
+            return (float) (baseValue + current * 0.002);
         }
         return baseValue;
     }
@@ -70,15 +76,23 @@ public class OverslimeArmyModifier extends Modifier implements ProjectileHitModi
         if (harvest || tool.hasTag(TinkerTags.Items.RANGED)) {
             if (player != null && key == TooltipKey.SHIFT) {
             if(harvest) {
-                addStatTooltip(tool, ToolStats.MINING_SPEED, TinkerTags.Items.HARVEST, (float) (current * level * 0.001), tooltip);
-                addStatTooltip(tool, ToolStats.ATTACK_DAMAGE, TinkerTags.Items.HARVEST, (float) (current * level * 0.001), tooltip);
+                addDamageTooltip(tool, (float) (current * 0.012), tooltip);
+                addSpeedTooltip(tool, (float) (current * 0.012), tooltip);
             }
             else
             {
-                addStatTooltip(tool, ToolStats.DRAW_SPEED, TinkerTags.Items.RANGED, (float) (current * level * 0.0001), tooltip);
+                addStatTooltip(tool, ToolStats.DRAW_SPEED, TinkerTags.Items.RANGED, (float) (current * 0.002), tooltip);
             }
             }
         }
+    }
+    protected void addSpeedTooltip(IToolStackView tool, float amount, List<Component> tooltip) {
+        addStatTooltip(tool, ToolStats.MINING_SPEED, TinkerTags.Items.MELEE_OR_UNARMED, amount, tooltip);
+    }
+
+    @Override
+    public void onProjectileLaunch(IToolStackView tool, ModifierEntry modifier, LivingEntity shooter, Projectile projectile, @org.jetbrains.annotations.Nullable AbstractArrow arrow, NamespacedNBT persistentData, boolean primary) {
+
     }
 }
 

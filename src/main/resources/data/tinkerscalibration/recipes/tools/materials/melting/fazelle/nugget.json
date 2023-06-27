@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": { "item": "tinkerscalibration:fazelle_nugget"},
+  "result": {
+    "fluid": "tinkerscalibration:moltenfazelle",
+    "amount": 10
+  },
+  "temperature": 1200,
+  "time": 12
+}

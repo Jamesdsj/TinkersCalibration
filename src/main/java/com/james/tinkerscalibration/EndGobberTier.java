@@ -1,4 +1,5 @@
 package com.james.tinkerscalibration;
+//import com.kwpugh.gobber2.lists.ToolMaterialTiers;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 
@@ -35,5 +36,11 @@ public class EndGobberTier implements Tier {
     public Ingredient getRepairIngredient() {
         return null;
     }
+
+    //@Override
+    //public net.minecraft.tags.TagKey<net.minecraft.world.level.block.Block> getTag()
+    //{
+    //    return ToolMaterialTiers.END_GOBBER.getTag();
+    //}
 
 }

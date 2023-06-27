@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": { "item": "tinkerscalibration:emperorslime_ingot" },
+  "result": {
+    "fluid": "tinkerscalibration:moltenemperorslime",
+    "amount": 90
+  },
+  "temperature": 1150,
+  "time": 50
+}

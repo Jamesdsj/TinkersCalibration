@@ -2,7 +2,7 @@
   "fallbacks": [
     "wood"
   ],
-  "color": "00ffff",
+  "color": "152a93",
   "luminosity": 0,
   "generator": {
     "transformer": {
@@ -12,31 +12,31 @@
         "palette": [
           {
             "grey": 0,
-            "color": "FF000000"
+            "color": "FF071866"
           },
           {
             "grey": 63,
-            "color": "FF00ffff"
+            "color": "FF3646eb"
           },
           {
             "grey": 102,
-            "color": "FF000000"
+            "color": "FF26369b"
           },
           {
             "grey": 140,
-            "color": "FF00ffff"
+            "color": "FF0d2077"
           },
           {
             "grey": 178,
-            "color": "FF00ffff"
+            "color": "FF13298f"
           },
           {
             "grey": 216,
-            "color": "FF000000"
+            "color": "FF071866"
           },
           {
             "grey": 255,
-            "color": "FF00ffff"
+            "color": "FF133d5d"
           }
         ]
       }

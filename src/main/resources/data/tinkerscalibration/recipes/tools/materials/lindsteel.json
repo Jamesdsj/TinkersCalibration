@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    {
+      "name": "tconstruct:molten_iron",
+      "amount": 180
+    },
+    {
+      "name": "tinkers_thinking:molten_ardite",
+      "amount": 90
+    },
+    {
+      "name": "tconstruct:molten_obsidian",
+      "amount": 1000
+    }
+  ],
+  "result": {
+    "fluid": "tinkerscalibration:moltenlindsteel",
+    "amount": 180
+  },
+  "temperature": 1200
+}

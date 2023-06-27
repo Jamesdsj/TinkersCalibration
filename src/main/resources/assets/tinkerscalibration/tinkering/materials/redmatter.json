@@ -6,10 +6,8 @@
   "luminosity": 0,
   "generator": {
     "transformer": {
-      "type": "tconstruct:recolor_sprite",
-      "color_mapping": {
-        "type": "tconstruct:grey_to_color",
-        "palette": [
+      "type": "tconstruct:grey_to_sprite",
+      "palette": [
           {
             "grey": 0,
             "color": "FFeddd5e"
@@ -52,4 +50,3 @@
     ],
     "ignoreMaterialStats": false
   }
-}

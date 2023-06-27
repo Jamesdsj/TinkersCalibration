@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "item": "projecte:red_matter_block"
+  },
+  "result": {
+    "fluid": "tinkerscalibration:moltenredmatter",
+    "amount": 900
+  },
+  "temperature": 1500,
+  "time": 150
+}

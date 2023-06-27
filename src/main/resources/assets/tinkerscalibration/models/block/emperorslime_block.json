@@ -1,0 +1,10 @@
+{
+  "loader": "mantle:colored_block",
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom":   "tinkerscalibration:block/emperorslime_bottom",
+    "top":      "tinkerscalibration:block/emperorslime_top",
+    "side":     "tconstruct:block/storage/queens_slime_side"
+  },
+  "colors": [{ "luminosity": 9 }]
+}

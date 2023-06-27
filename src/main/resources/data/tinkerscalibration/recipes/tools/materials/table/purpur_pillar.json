@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "minecraft:purpur_pillar"
+  },
+  "value": 4,
+  "needed": 1,
+  "material": "tinkerscalibration:purpur",
+  "leftover": "minecraft:popped_chorus_fruit"
+}

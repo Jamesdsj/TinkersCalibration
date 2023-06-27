@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:material",
+  "conditions": [
+    {
+      "modid": "twilightforest",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "ingredient": {
+    "item": "twilightforest:carminite"
+  },
+  "value": 1,
+  "needed": 1,
+  "material": "tinkerscalibration:carminite"
+}

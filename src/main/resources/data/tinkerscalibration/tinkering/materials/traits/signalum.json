@@ -1,0 +1,12 @@
+{
+  "default": [
+      {
+        "name": "tinkerscalibration:energystorage",
+        "level": 1
+      },
+      {
+        "name": "tinkerscalibration:energyshield",
+        "level": 1
+      }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "tag": "tconstruct:casts/single_use/gem"
+  },
+  "fluid": {
+    "name": "tinkerscalibration:moltencarminite",
+    "amount": 90
+  },
+  "result": "twilightforest:carminite",
+  "cooling_time": 45
+}

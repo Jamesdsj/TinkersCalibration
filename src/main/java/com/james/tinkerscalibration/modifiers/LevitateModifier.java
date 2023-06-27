@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
 
 public class LevitateModifier extends Modifier implements ProjectileLaunchModifierHook, ProjectileHitModifierHook {
     private static MobEffectInstance makeLevitateEffect(int level) {
-        return new MobEffectInstance(MobEffects.LEVITATION, 20 * level, level - 1);
+        return new MobEffectInstance(MobEffects.LEVITATION, 60 * level, level);
     }
     @Override
     protected void registerHooks(Builder hookBuilder) {

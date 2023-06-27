@@ -27,14 +27,7 @@ import java.util.List;
 public class DarknessModifier extends Modifier implements ConditionalStatModifierHook {
     public int getLight(Level world, BlockPos pos)
     {
-        if(world.canSeeSky(pos))
-        {
-            return Math.max(world.getMaxLocalRawBrightness(pos) - world.getSkyDarken(), world.getBrightness(LightLayer.BLOCK, pos));
-        }
-        else
-        {
-            return Math.max(world.getBrightness(LightLayer.SKY, pos), world.getBrightness(LightLayer.BLOCK, pos));
-        }
+        return Math.max(world.getBrightness(LightLayer.SKY, pos) - world.getSkyDarken(), world.getBrightness(LightLayer.BLOCK, pos));
     }
 
     @Override
@@ -44,7 +37,7 @@ public class DarknessModifier extends Modifier implements ConditionalStatModifie
         BlockPos pos = event.getPos().above();
         int light = getLight(world, pos) + 1;
         if (light < 10) {
-            event.setNewSpeed((float) (event.getOriginalSpeed() * (1 + 0.5 * level / light)));
+            event.setNewSpeed((float) (event.getNewSpeed() * (1 + 0.5 * level / light)));
         }
     }
     @Override

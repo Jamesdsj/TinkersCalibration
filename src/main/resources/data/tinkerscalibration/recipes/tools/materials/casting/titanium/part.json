@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "name": "tinkerscalibration:moltentitanium",
+    "amount": 90
+  },
+  "temperature": 1350,
+  "output": "tinkerscalibration:titanium"
+}

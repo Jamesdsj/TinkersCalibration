@@ -32,7 +32,7 @@ public class CriticalAttackModifier extends Modifier implements ConditionalStatM
         double z = target.getZ();
         if (tool.getCurrentDurability() == 1) {
             ToolDamageUtil.breakTool(stack);
-            world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 0.0D, 0.0D, 0.0D);
+            world.addParticle(ParticleTypes.EXPLOSION, x, y, z, 1.0D, 1.0D, 1.0D);
             return 100;
 
         }
@@ -49,16 +49,16 @@ public class CriticalAttackModifier extends Modifier implements ConditionalStatM
     @Override
     public float modifyStat(IToolStackView tool, ModifierEntry modifier, LivingEntity living, FloatToolStat stat, float baseValue, float multiplier) {
         boolean harvest = tool.hasTag(TinkerTags.Items.HARVEST);
-        if(tool.getCurrentDurability() == 1)
+        if(tool.getCurrentDurability() == 2 || tool.getCurrentDurability() == 1)
         {
             if(harvest) {
-                if (stat == ToolStats.ATTACK_SPEED) {
-                    return 0.1F;
+                if (stat == ToolStats.USE_ITEM_SPEED) {
+                    return 0.01F;
                 }
             }
-            else if(!harvest){
+            else {
                 if (stat == ToolStats.DRAW_SPEED) {
-                    return 0.1F;
+                    return 0.01F;
                 }
             }
         }

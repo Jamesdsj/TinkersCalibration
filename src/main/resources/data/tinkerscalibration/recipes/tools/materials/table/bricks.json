@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "item": "minecraft:nether_bricks"
+  },
+  "value": 1,
+  "needed": 1,
+  "material": "tinkerscalibration:netherbrick",
+  "leftover": "minecraft:nether_brick"
+}

@@ -6,9 +6,7 @@
   "luminosity": 0,
   "generator": {
     "transformer": {
-      "type": "tconstruct:recolor_sprite",
-      "color_mapping": {
-        "type": "tconstruct:grey_to_color",
+      "type": "tconstruct:grey_to_sprite",
         "palette": [
           {
             "grey": 0,
@@ -16,27 +14,30 @@
           },
           {
             "grey": 63,
-            "color": "FF2f4f4f"
+            "color": "FF2f8f0f",
+            "path": "tinkerscalibration:item/materials/generator/bamboosteel_dark"
           },
           {
             "grey": 102,
-            "color": "FF000000"
+            "path": "tinkerscalibration:item/materials/generator/bamboosteel_dark"
           },
           {
             "grey": 140,
-            "color": "FF2f4f4f"
+            "color": "FF669966",
+            "path": "tinkerscalibration:item/materials/generator/bamboosteel"
           },
           {
             "grey": 178,
-            "color": "FF2f4f4f"
+            "path": "tinkerscalibration:item/materials/generator/bamboosteel"
           },
           {
             "grey": 216,
-            "color": "FF000000"
+            "color": "FFe1e1e1",
+            "path": "tinkerscalibration:item/materials/generator/bamboosteel_bright"
           },
           {
             "grey": 255,
-            "color": "FF2f4f4f"
+            "path": "tinkerscalibration:item/materials/generator/bamboosteel_bright"
           }
         ]
       }
@@ -52,4 +53,3 @@
     ],
     "ignoreMaterialStats": false
   }
-}

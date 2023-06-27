@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:casting_basin",
+  "cast": {
+    "item": "tconstruct:ichor_congealed_slime"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "tag": "tinkerscalibration:moltenichor",
+    "amount": 1250
+  },
+  "result": "tconstruct:ichor_slime",
+  "cooling_time": 119
+}

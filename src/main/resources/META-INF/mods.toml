@@ -20,7 +20,7 @@ modId="tinkerscalibration" #mandatory
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
 version="1.0.0" #mandatory
-credits="Thanks for all the tinkers, especially Beidou-Shen(北斗·神), la_ji, JihandeMoyingren(极寒de末影人)and KRIS144！"
+credits="Thanks all the tinkers, especially Beidou-Shen(北斗·神), la_ji, Wumutu, JihandeMoyingren(极寒de末影人), chuangxiang2333, and smartgenius5558！"
 # A display name for the mod
 displayName="Tinkers Calibration" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -62,3 +62,15 @@ mandatory=true
 versionRange="[1.18.2-3.6.3.111,)"
 ordering="AFTER"
 side="BOTH"
+[[dependencies.tinkerscalibration]]
+modId="twilightforest"
+mandatory= false
+versionRange="[1.18.2-4.1.1494,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.tinkerscalibration]]
+modId = "projecte"
+mandatory = false
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"

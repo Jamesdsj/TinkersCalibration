@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "name": "tinkerscalibration:moltengobber",
+    "amount": 90
+  },
+  "temperature": 800,
+  "output": "tinkerscalibration:gobber"
+}

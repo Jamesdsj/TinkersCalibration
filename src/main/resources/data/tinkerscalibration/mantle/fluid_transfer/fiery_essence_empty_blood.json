@@ -1,0 +1,17 @@
+{
+  "type": "mantle:empty_item",
+  "conditions": [
+  {
+    "modid": "twilightforest",
+    "type": "forge:mod_loaded"
+  }
+],
+"input": {
+  "item": "twilightforest:fiery_blood"
+},
+"filled": "minecraft:glass_bottle",
+"fluid": {
+  "fluid": "twilightforest:fiery_essence",
+  "amount": 250
+}
+}

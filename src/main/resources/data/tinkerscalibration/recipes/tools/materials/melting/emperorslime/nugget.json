@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": { "item": "tinkerscalibration:emperorslime_nugget" },
+  "result": {
+    "fluid": "tinkerscalibration:moltenemperorslime",
+    "amount": 10
+  },
+  "temperature": 1150,
+  "time": 10
+}

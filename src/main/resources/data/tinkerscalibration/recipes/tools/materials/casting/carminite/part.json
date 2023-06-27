@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "name": "tinkerscalibration:moltencarminite",
+    "amount": 90
+  },
+  "temperature": 900,
+  "output": "tinkerscalibration:carminite"
+}

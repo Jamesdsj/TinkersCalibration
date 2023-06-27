@@ -51,14 +51,7 @@ public class ImpregnableModifier extends Modifier implements ProjectileLaunchMod
     }
     @Override
     public int onDamageTool(IToolStackView tool, int level, int amount, @Nullable LivingEntity holder) {
-        boolean harvest = tool.hasTag(TinkerTags.Items.HARVEST);
-        float bonus;
-        if (harvest) {
-            bonus = getBonus(holder, Utils.impregnableEffect, level, 6);
-        } else {
-            bonus = getBonus(holder, Utils.impregnableEffect, level, 4);
-        }
-        bonus *= 1;
+        float bonus = getBonus(holder, Utils.impregnableEffect, level, 6);
         int off = 0;
         for (int i = 0; i < amount; i++) {
             if (RANDOM.nextFloat() >= 1 / bonus) {
@@ -86,16 +79,10 @@ public class ImpregnableModifier extends Modifier implements ProjectileLaunchMod
         if (harvest || tool.hasTag(TinkerTags.Items.RANGED)) {
             float bonus;
             if (player != null && key == TooltipKey.SHIFT) {
-                if (harvest) {
-                    bonus = getBonus(player, Utils.impregnableEffect, level, 6);
-                } else {
-                    bonus = getBonus(player, Utils.impregnableEffect, level, 4);
+                bonus = getBonus(player, Utils.impregnableEffect, level, 6);
+                if (bonus > 0) {
+                    addPercentTooltip(UNBREAKING, 1 / bonus, tooltip);
                 }
-            } else {
-                bonus = level * 0.25f;
-            }
-            if (bonus > 0) {
-                addPercentTooltip(UNBREAKING, bonus, tooltip);
             }
         }
     }

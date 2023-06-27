@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient":{ "item":"tinkerscalibration:mangobberslime_nugget"},
+  "result": {
+    "fluid": "tinkerscalibration:moltenmangobberslime",
+    "amount": 10
+  },
+  "temperature": 1500,
+  "time": 20
+}

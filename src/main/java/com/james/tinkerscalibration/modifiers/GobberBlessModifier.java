@@ -1,9 +1,7 @@
 package com.james.tinkerscalibration.modifiers;
 
 import slimeknights.tconstruct.library.modifiers.Modifier;
-import slimeknights.tconstruct.library.tools.context.ToolHarvestContext;
 import slimeknights.tconstruct.library.tools.context.ToolRebuildContext;
-import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.stat.ModifierStatsBuilder;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 
@@ -18,10 +16,5 @@ public class GobberBlessModifier extends Modifier {
         ToolStats.VELOCITY.multiply(builder, 1 + 0.1 * level);
         ToolStats.ACCURACY.multiply(builder, 1 + 0.1 * level);
         ToolStats.PROJECTILE_DAMAGE.multiply(builder, 1 + 0.1 * level);
-    }
-    @Override
-    public void afterBlockBreak(IToolStackView tool, int level, ToolHarvestContext context) {}
-    {
-
     }
 }

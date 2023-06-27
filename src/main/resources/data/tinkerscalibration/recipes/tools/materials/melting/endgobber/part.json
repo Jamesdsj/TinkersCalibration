@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input":"tinkerscalibration:endgobber",
+  "result": {
+    "fluid": "tinkerscalibration:moltenendgobber",
+    "amount": 90
+  },
+  "temperature": 550
+}

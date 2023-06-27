@@ -11,6 +11,12 @@ public class GobberCurseModifier extends NoLevelsModifier {
     public void addVolatileData(ToolRebuildContext context, int level, ModDataNBT volatileData) {
         IModDataView persistentData = context.getPersistentData();
         int number = persistentData.getSlots(SlotType.UPGRADE);
-        volatileData.addSlots(SlotType.UPGRADE, 0 - number);
+        if(number >= 2) {
+            volatileData.addSlots(SlotType.UPGRADE, 0 - number);
+        }
+        else
+        {
+            volatileData.addSlots(SlotType.UPGRADE, -2);
+        }
     }
 }

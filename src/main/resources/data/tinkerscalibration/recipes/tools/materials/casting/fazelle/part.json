@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "name": "tinkerscalibration:moltenfazelle",
+    "amount": 90
+  },
+  "temperature": 1200,
+  "output": "tinkerscalibration:fazelle"
+}
