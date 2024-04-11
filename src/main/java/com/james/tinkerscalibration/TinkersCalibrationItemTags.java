@@ -3,18 +3,13 @@ package com.james.tinkerscalibration;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import slimeknights.tconstruct.common.TinkerTags;
-
 import javax.annotation.Nullable;
 public class TinkersCalibrationItemTags extends ItemTagsProvider {
-    private static TagKey<Item> create(String name) {
-        return ItemTags.create(new ResourceLocation(name));
-    }
+
+//    private static TagKey<Item> create(String name) {
+//        return ItemTags.create(new ResourceLocation(name));
+//    }
 
     public TinkersCalibrationItemTags(DataGenerator gen, BlockTagsProvider blockTagsProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(gen, blockTagsProvider, TinkersCalibration.MODID, existingFileHelper);

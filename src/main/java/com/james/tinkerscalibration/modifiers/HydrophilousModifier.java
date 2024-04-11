@@ -14,11 +14,10 @@ import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
-import slimeknights.tconstruct.library.utils.TooltipKey;
+import slimeknights.mantle.client.TooltipKey;
 
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Objects;
 
 public class HydrophilousModifier extends Modifier{
     @Override

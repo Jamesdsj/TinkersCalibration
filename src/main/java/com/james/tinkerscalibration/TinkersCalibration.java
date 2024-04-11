@@ -10,7 +10,6 @@ import net.minecraftforge.common.TierSortingRegistry;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -53,7 +52,6 @@ public class TinkersCalibration {
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
         if(event.includeClient())
         {
-            ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
             TinkersCalibrationMaterialsSprite materialSprites = new TinkersCalibrationMaterialsSprite();
             gen.addProvider(new TinkersCalibrationRenderInfo(gen, materialSprites));
             AbstractMaterialSpriteProvider provider = new TinkersCalibrationMaterialsSprite();

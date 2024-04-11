@@ -19,17 +19,18 @@ import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.hook.ConditionalStatModifierHook;
+import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
-import slimeknights.tconstruct.library.tools.context.ToolRebuildContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.stat.FloatToolStat;
-import slimeknights.tconstruct.library.tools.stat.ModifierStatsBuilder;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.modifiers.upgrades.general.ReinforcedModifier;
 
 import javax.annotation.Nonnull;
+
+import java.lang.reflect.Field;
 import java.util.List;
 
 import static slimeknights.tconstruct.library.tools.stat.ToolStats.DRAW_SPEED;
@@ -67,7 +68,14 @@ public class IgneousModifier extends Modifier implements ConditionalStatModifier
         ModDataNBT persistantData = tool.getPersistentData();
         if(persistantData.contains(KEY, 5)) {
             float value = persistantData.getFloat(KEY);
-            int reinforcedlevel = tool.getModifierLevel(TinkerModifiers.reinforced.get());
+            int reinforcedlevel = 0;
+            try {
+				Field field = TinkerModifiers.class.getField("reinforced");
+				reinforcedlevel = tool.getModifierLevel(((StaticModifier<?>) field.get(TinkerModifiers.class)).get());
+			} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+				e.printStackTrace();
+			}
+            
             float reinforced = ReinforcedModifier.diminishingPercent(reinforcedlevel);
             if(value >= 2.5 * level) {
                 return damageReinforced(amount, (float) (0.25 * level) + reinforced);
@@ -78,6 +86,7 @@ public class IgneousModifier extends Modifier implements ConditionalStatModifier
         }
         return amount;
     }
+    
     @Override
     public void onRemoved(IToolStackView tool) {
         tool.getPersistentData().remove(KEY);

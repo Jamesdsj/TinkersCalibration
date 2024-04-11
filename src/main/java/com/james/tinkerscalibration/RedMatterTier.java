@@ -1,9 +1,7 @@
 package com.james.tinkerscalibration;
 
-import moze_intel.projecte.gameObjs.PETags;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraftforge.fml.ModList;
 
 public class RedMatterTier implements Tier {
 

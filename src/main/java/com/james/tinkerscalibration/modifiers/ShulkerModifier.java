@@ -17,9 +17,7 @@ import net.minecraftforge.event.entity.ProjectileImpactEvent;
 import slimeknights.mantle.util.RegistryHelper;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
-import slimeknights.tconstruct.library.modifiers.TinkerHooks;
 import slimeknights.tconstruct.library.modifiers.hook.ConditionalStatModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.interaction.GeneralInteractionModifierHook;
 import slimeknights.tconstruct.library.modifiers.impl.NoLevelsModifier;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
@@ -49,7 +47,7 @@ public class ShulkerModifier extends NoLevelsModifier {
 
                     ModifierEntry activeModifier = ModifierUtil.getActiveModifier(tool);
                     if (activeModifier != null) {
-                        GeneralInteractionModifierHook hook = activeModifier.getHook(TinkerHooks.CHARGEABLE_INTERACT);
+//                        GeneralInteractionModifierHook hook = activeModifier.getHook(TinkerHooks.CHARGEABLE_INTERACT);
                         if (activeModifier.getLevel() >= 1 && living.isCrouching()) {
                             if (!RegistryHelper.contains(TinkerTags.EntityTypes.REFLECTING_PRESERVE_OWNER, projectile.getType())) {
                                 projectile.setOwner(living);

@@ -23,7 +23,6 @@ import slimeknights.tconstruct.library.modifiers.util.ModifierHookMap;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.shared.TinkerCommons;
 
 import java.util.List;
@@ -47,7 +46,7 @@ public class TastyModifierRewrite  extends Modifier implements GeneralInteractio
     @Override
     public boolean onFinishUsing(IToolStackView tool, ModifierEntry modifier, LivingEntity entity) {
         // remove is eating tag to prevent from messing with other modifiers
-        ModDataNBT persistentData = tool.getPersistentData();
+//        ModDataNBT persistentData = tool.getPersistentData();
         if (!tool.isBroken() && entity instanceof Player player && player.canEat(false)) {
             // eat the food
             int level = modifier.getLevel();

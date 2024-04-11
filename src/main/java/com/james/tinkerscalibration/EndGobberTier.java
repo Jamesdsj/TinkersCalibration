@@ -1,5 +1,5 @@
 package com.james.tinkerscalibration;
-//import com.kwpugh.gobber2.lists.ToolMaterialTiers;
+
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 

@@ -2,22 +2,12 @@ package com.james.tinkerscalibration;
 
 import com.james.tinkerscalibration.modifiers.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.material.Fluid;
-import net.minecraft.world.level.material.Material;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import slimeknights.mantle.registration.deferred.FluidDeferredRegister;
-import slimeknights.mantle.registration.object.FluidObject;
-import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.common.TinkerEffect;
 import slimeknights.tconstruct.common.TinkerModule;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
@@ -28,7 +18,6 @@ import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
 import slimeknights.tconstruct.tools.modifiers.effect.NoMilkEffect;
 import slimeknights.tconstruct.tools.modifiers.traits.melee.LaceratingModifier;
 
-import javax.swing.text.TabStop;
 import java.util.function.IntFunction;
 import java.util.function.Supplier;
 
@@ -100,7 +89,6 @@ public class Utils extends TinkerModule{
     public static StaticModifier<Modifier> tastyrewrite = MODIFIERS.register("tastyrewrite", TastyModifierRewrite::new);
     public static StaticModifier<Modifier> shulker = MODIFIERS.register("shulker", ShulkerModifier::new);
     public static final ModifierId ecological = id("ecological");
-    private static IEventBus HymonArrow;
     private static ModifierId id(String name) {
         return new ModifierId(TinkersCalibration.MODID, name);
     }

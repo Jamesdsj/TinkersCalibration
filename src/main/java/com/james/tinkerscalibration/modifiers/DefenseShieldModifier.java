@@ -1,14 +1,9 @@
 package com.james.tinkerscalibration.modifiers;
 
-import com.james.tinkerscalibration.Utils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.LivingEntity;
 import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.library.modifiers.impl.DurabilityShieldModifier;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
@@ -104,12 +99,12 @@ public class DefenseShieldModifier extends DurabilityShieldModifier {
     }
     @Override
     public void onAttacked(IToolStackView tool, int level, EquipmentContext context, EquipmentSlot slotType, DamageSource source, float amount, boolean isDirectDamage) {
-        Entity attacker = source.getEntity();
-        LivingEntity target = context.getEntity();
-        //DefenseShieldModifier defenseshield = Utils.defenseshield.get();
-        //if(target != null && defenseshield.getDefenseShield(tool) > 0) {
-        //    target.heal(amount);
-        //    defenseshield.addDefenseShield(tool, (int) (0 - amount));
-        //}
+//        Entity attacker = source.getEntity();
+//        LivingEntity target = context.getEntity();
+//        DefenseShieldModifier defenseshield = Utils.defenseshield.get();
+//        if(target != null && defenseshield.getDefenseShield(tool) > 0) {
+//            target.heal(amount);
+//            defenseshield.addDefenseShield(tool, (int) (0 - amount));
+//        }
     }
 }

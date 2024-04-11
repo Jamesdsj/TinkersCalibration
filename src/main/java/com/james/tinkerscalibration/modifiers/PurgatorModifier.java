@@ -1,7 +1,5 @@
 package com.james.tinkerscalibration.modifiers;
 
-import com.james.tinkerscalibration.TinkersCalibrationConfig;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -13,17 +11,11 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.mantle.client.TooltipKey;
-import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
-import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
-import slimeknights.tconstruct.library.tools.stat.ToolStats;
-
 import javax.annotation.Nonnull;
 import java.util.List;
-
-import static slimeknights.mantle.util.OffhandCooldownTracker.KEY;
 
 public class PurgatorModifier extends Modifier {
     public boolean isNetherDimension(Entity entity) {

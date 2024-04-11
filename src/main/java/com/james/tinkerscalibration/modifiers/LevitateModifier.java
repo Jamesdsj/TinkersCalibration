@@ -17,8 +17,6 @@ import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
 import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
-import slimeknights.tconstruct.tools.TinkerModifiers;
-
 import javax.annotation.Nullable;
 
 public class LevitateModifier extends Modifier implements ProjectileLaunchModifierHook, ProjectileHitModifierHook {

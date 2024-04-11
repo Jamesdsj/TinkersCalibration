@@ -2,7 +2,6 @@ package com.james.tinkerscalibration;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
-import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class TinkersCalibrationBlockTags extends BlockTagsProvider {
